@@ -17,6 +17,16 @@
     };
   });
 
+  app.controller("ReviewController", function(){
+    this.review = {};
+
+    this.addReview = function(product) {
+      product.reviews.push(this.review);
+      this.review = {}
+    };
+
+  });
+
   var gems = [
     {
       name: 'Angular.js',
@@ -28,7 +38,19 @@
           full: 'image1.png',
           thumb: 'image1-thumb.png'
         }
-      ]
+      ],
+      reviews: [
+        {
+          stars: 5,
+          body: "I love this product!",
+          author: "hey@me.com"
+        },
+        {
+          stars: 1,
+          body: "this product is not as good!",
+          author: "hey@you.com"
+        }
+      ],
     },
     {
       name: "Backbone.js",
@@ -40,7 +62,8 @@
           full: 'image2.png',
           thumb: 'image2-thumb.png'
         }
-      ]
+      ],
+      reviews: []
     }
   ];
 })();

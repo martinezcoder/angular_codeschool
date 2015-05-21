@@ -19,15 +19,29 @@
           </ul>
           <div class="panel" ng-show="panel.isSelected(1)">
             <h4>Description</h4>
-            <p>{{product.description}}</p>
+            <blockquote>{{product.description}}</blockquote>
           </div>
           <div class="panel" ng-show="panel.isSelected(2)">
             <h4>Specifications</h4>
-            <p></p>
+            <blockquote></blockquote>
           </div>
           <div class="panel" ng-show="panel.isSelected(3)">
             <h4>Reviews</h4>
-            <p></p>
+            <blockquote ng-repeat="review in product.reviews">
+              <b>Stars: {{review.stars}}</b>
+              {{review.body}}
+              <cite>by: {{review.author}}</cite>
+            </blockquote>
+            <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
+              <select ng-model="reviewCtrl.review.stars" class="form-control">
+                <option value="1">1 star</option>
+                <option value="2">2 stars</option>
+              </select>
+              <textarea ng-model="reviewCtrl.review.body" class="form-control" rows="3"></textarea>
+              <label>by:</label>
+              <input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="email"/>
+              <input type="submit" value="Submit" class="btn btn-default" />
+            </form>
           </div>
         </section>
       </li>
