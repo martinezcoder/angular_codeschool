@@ -9,8 +9,16 @@
         <h3>
         {{product.name}}
         <em class="pull-right">{{product.price | currency}}</em>
+        <img ng-src="{{product.images[0].full}}"/>
       </li>
     </ul>
+    <section>
+      <ul class="nav nav-pills">
+        <li><a href>Description</a></li>
+        <li><a href>Specification</a></li>
+        <li><a href>Reviews</a></li>
+      </ul>
+    </section>
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </body>
