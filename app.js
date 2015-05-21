@@ -1,1 +1,4 @@
-var app = angular.module('store', [ ]);
+(function(){
+  var app = angular.module('store', [ ]);
+})();
+
