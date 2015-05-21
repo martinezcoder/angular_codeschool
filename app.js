@@ -7,9 +7,9 @@
 
   var gems = [
     {
-      name: 'Dodecahedron',
+      name: 'Angular.js',
       price: 2,
-      description: 'this is a description of the Dodecahedron product',
+      description: 'this is a description of the Angular product',
       canPurchase: true,
       images: [
         {
@@ -19,9 +19,9 @@
       ]
     },
     {
-      name: "Personal Gem",
+      name: "Backbone.js",
       price: 5.95,
-      description: "this is another description",
+      description: "this is a description of Backbone",
       canPurchase: false,
       images: [
         {
