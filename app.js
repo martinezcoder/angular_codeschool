@@ -8,7 +8,7 @@
   var gems = [
     {
       name: 'Dodecahedron',
-      price: 2.95,
+      price: 2,
       description: 'this is a description of the Dodecahedron product',
       canPurchase: true,
     },
